@@ -1,0 +1,39 @@
+package B;
+
+public class ContaCorrente {
+    double saldo = 0;
+    double valor_deposito;
+    double valor_saque;
+
+    public double getValor_deposito() {
+        return valor_deposito;
+    }
+
+    public void setValor_deposito(double valor_deposito) {
+        this.valor_deposito = valor_deposito;
+    }
+
+    public double getValor_saque() {
+        return valor_saque;
+    }
+
+    public void setValor_saque(double valor_saque) {
+        this.valor_saque = valor_saque;
+    }
+
+
+
+    public double Depositar() {
+        saldo += valor_deposito;
+        return saldo;
+    }
+
+    public double Saque(){
+        saldo -= valor_saque;
+        return saldo;
+    }
+
+    public double Dados_Conta(){
+        return saldo;
+    }
+}

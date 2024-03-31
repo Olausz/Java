@@ -1,0 +1,52 @@
+package A;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Funcionario fc = new Funcionario();
+        Gerente gr = new Gerente();
+        Diretor dr = new Diretor();
+
+
+        System.out.println("Digite 1 - Cadastro Gerente / 2 - Cadrasto Diretor / 3 - Cadrasto Funcionario / 0 - Para sair");
+        int x = sc.nextInt();
+        switch (x) {
+            case 0:
+                System.out.println("Saindo....");
+                break;
+            case 1:
+                System.out.println("Digite o nome do Gerente");
+                gr.setNome(sc.nextLine());
+                System.out.println("Digite o Salario do Gerente");
+                gr.setSalario(sc.nextDouble());
+
+                System.out.println("Gerente: " + gr.getNome());
+                System.out.println("Salário: " + gr.getSalario());
+                break;
+            case 2:
+                System.out.println("Digite o nome do Diretor");
+                dr.setNome(sc.nextLine());
+                System.out.println("Digite o Salario do Diretor");
+                dr.setSalario(sc.nextDouble());
+                System.out.println("Digite as Ações do Diretor");
+                dr.setAções(sc.nextInt());
+
+                System.out.println("Diretor: " + dr.getNome());
+                System.out.println("Salário: " + dr.getSalario());
+                System.out.println("Ações: " + dr.getAções());
+                break;
+            case 3:
+                System.out.println("Digite o nome do Funcionario");
+                fc.setNome(sc.nextLine());
+                System.out.println("Digite o Salario do Funcionario");
+                fc.setSalario(sc.nextDouble());
+
+                System.out.println("Funcionario: " + fc.getNome());
+                System.out.println("Salário: " + fc.getSalario());
+                System.out.println("Salario com bonus: " + gr.calcularBonus());
+
+        }
+    }
+}

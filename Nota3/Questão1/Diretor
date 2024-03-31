@@ -1,0 +1,13 @@
+package A;
+
+public class Diretor extends Funcionario {
+    private int ações;
+
+    public int getAções() {
+        return ações;
+    }
+
+    public void setAções(int ações) {
+        this.ações = ações;
+    }
+}

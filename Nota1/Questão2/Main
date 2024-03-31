@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        Aluno al = new Aluno();
+
+
+        System.out.print("Digite a primeira nota do Aluno: ");
+        al.n1 = sc.nextInt();
+        System.out.print("Digite a segunda nota do Aluno: ");
+        al.n2 = sc.nextInt();
+        System.out.print("Digite a terceira nota do Aluno: ");
+        al.n3 = sc.nextInt();
+
+        al.Calculomedia();
+
+        System.out.println("a primeira nota do aluno é: "+al.n1);
+        System.out.println("a segunda nota do aluno é: "+al.n2);
+        System.out.println("a terceira nota do aluno é: "+al.n3);
+        System.out.println("a media do aluno é: "+al.media);
+
+        if(al.media >=7){
+            System.out.print("O Aluno está aprovado");
+        }else if(al.media <= 4){
+            System.out.print("O Aluno está reprovado");
+        }else{
+            System.out.print("O Aluno está na final");
+        }
+
+
+    }
+}

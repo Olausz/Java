@@ -1,0 +1,29 @@
+package PackageS;
+// Classe Main para teste
+public class Main {
+    public static void main(String[] args) {
+        // Criando uma televisão
+        Televisao tv = new Televisao("Samsung TV", 10, 1999.99);
+
+        // Acessando canais da televisão
+        tv.acessarCanais();
+
+        // Demonstrando os dados da televisão
+        System.out.println("Dados da televisão:");
+        System.out.println("Nome: " + tv.nome);
+        System.out.println("Estoque: " + tv.estoque);
+        System.out.println("Preço: " + tv.preco);
+
+        // Criando um smartphone
+        Smartphone smartphone = new Smartphone("iPhone", 20, 2999.99);
+
+        // Realizando uma ligação pelo smartphone
+        smartphone.realizarLigacao();
+
+        // Demonstrando os dados do smartphone
+        System.out.println("Dados do smartphone:");
+        System.out.println("Nome: " + smartphone.nome);
+        System.out.println("Estoque: " + smartphone.estoque);
+        System.out.println("Preço: " + smartphone.preco);
+    }
+}

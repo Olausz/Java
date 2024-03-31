@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+
+        Scanner sc = new Scanner(System.in);
+        funcionario fc = new funcionario();
+
+        System.out.print("Digite o Nome do Funcionario: ");
+        fc.Nome = sc.nextLine();
+        System.out.print("Digite a Matricula do Funcionario: ");
+        fc.Matricula = sc.nextInt();
+        System.out.print("Digite o Salario Bruto do Funcionario: ");
+        fc.salario = sc.nextDouble();
+
+        fc.calculoINSS();
+        fc.calculoSalarioLiquido();
+
+        System.out.println("O Nome do funcionario é: "+ fc.Nome);
+        System.out.println("A Matricula do funcionario é: "+ fc.Matricula);
+        System.out.println("O Salario é: "+fc.salario);
+        System.out.println("A Dedução da INSS  é: "+ fc.inss);
+        System.out.println("O Salario liquido é: "+ fc.salario_li);
+
+
+    }
+}

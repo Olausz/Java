@@ -1,0 +1,67 @@
+package B;
+
+public class ContaPoupanca {
+    double Selic;
+    double saldo = 2000;
+    double valor_deposito;
+    double valor_saque;
+    int num_meses;
+    double valor_rendimento;
+
+    public double getValor_deposito() {
+        return valor_deposito;
+    }
+
+    public void setValor_deposito(double valor_deposito) {
+        this.valor_deposito = valor_deposito;
+    }
+
+    public double getValor_saque() {
+        return valor_saque;
+    }
+
+    public void setValor_saque(double valor_saque) {
+        this.valor_saque = valor_saque;
+    }
+
+    public int getNum_meses() {
+        return num_meses;
+    }
+
+    public void setNum_meses(int num_meses) {
+        this.num_meses = num_meses;
+    }
+
+    public double Depositar() {
+        saldo += valor_deposito;
+        return saldo;
+    }
+
+    public double Saque() {
+        saldo -= valor_saque;
+        return saldo;
+    }
+
+    public double Rendimento() {
+        double rendimento;
+        if (Selic > 8.5) {
+            rendimento = 0.005 * saldo;
+        } else {
+            rendimento = 0.007 * Selic * saldo;
+        }
+        valor_rendimento = rendimento * num_meses;
+        return valor_rendimento;
+    }
+
+    public double Dados_Conta() {
+        return saldo;
+    }
+
+    public double getSelic() {
+        return Selic;
+    }
+
+    public void setSelic(double selic) {
+        Selic = selic;
+    }
+}

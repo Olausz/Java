@@ -1,0 +1,76 @@
+package B;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        ContaCorrente cr = new ContaCorrente();
+        ContaPoupanca cp = new ContaPoupanca();
+
+
+        System.out.println("Digite 1 - Para conta Corrente / 2 - Para Conta Poupança / 3 - Para sair");
+        int x = sc.nextInt();
+
+
+
+        switch (x) {
+            case 1:
+                System.out.println("Digite 1 - Para Depositar / 2 - Para Sacar / 3 - Dados da Conta / 4 - Saindo");
+                int y = sc.nextInt();
+                switch (y) {
+                    case 1:
+                        System.out.println("O Saldo atual é: " + cr.saldo);
+                        System.out.println("Digite o valor de deposito: ");
+                        cr.setValor_deposito(sc.nextDouble());
+                        System.out.println("O Saldo é " + cr.Depositar());
+                        break;
+                    case 2:
+                        System.out.println("O Saldo atual é: " + cr.saldo);
+                        System.out.println("Digite o valor de saque: ");
+                        cr.setValor_saque(sc.nextDouble());
+                        System.out.println("O Saldo é " + cr.Saque());
+                        break;
+                    case 3:
+                        System.out.println(cr.Dados_Conta());
+                        break;
+                }
+                break;
+            case 2:
+                System.out.println("Digite 1 - Para Depositar / 2 - Para Sacar / 3 - Dados da Conta / 4 - Rendimento / 5 - Saindo");
+                int z = sc.nextInt();
+                switch (z) {
+                    case 1:
+                        System.out.println("O Saldo atual é: " + cp.saldo);
+                        System.out.println("Digite o valor de deposito: ");
+                        cp.setValor_deposito(sc.nextDouble());
+                        System.out.println("O Saldo é " + cp.Depositar());
+                        break;
+                    case 2:
+                        System.out.println("O Saldo atual é: " + cp.saldo);
+                        System.out.println("Digite o valor de saque: ");
+                        cp.setValor_saque(sc.nextDouble());
+                        System.out.println("O Saldo é " + cp.Saque());
+                        break;
+                    case 3:
+                        System.out.println(cp.Dados_Conta());
+                        break;
+                    case 4:
+                        System.out.println("Digite o valor do Selic: ");
+                        cp.setSelic(sc.nextDouble());
+                        System.out.println("Digite o numero de meses: ");
+                        cp.setNum_meses(sc.nextInt());
+                        cp.Rendimento();
+                        System.out.println("O valor de rendimento é: " + cp.valor_rendimento);
+                        break;
+                    case 5:
+                        System.out.println("Saindo....");
+                        break;
+                }
+                break;
+            case 3:
+                break;
+        }
+    }
+}

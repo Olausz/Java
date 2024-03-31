@@ -1,0 +1,29 @@
+package A;
+
+public class Gerente extends Funcionario {
+    // Atributos adicionais
+    private String nome_gerente;
+    private double salario_gerente;
+
+    // Método para calcular o bônus de 10% do salário do gerente
+    public double calcularBonus() {
+        return getSalario() * 0.10;
+    }
+
+    // Getters e setters para os atributos específicos de gerente
+    public String getNome_gerente() {
+        return nome_gerente;
+    }
+
+    public void setNome_gerente(String nome_gerente) {
+        this.nome_gerente = nome_gerente;
+    }
+
+    public double getSalario_gerente() {
+        return salario_gerente;
+    }
+
+    public void setSalario_gerente(double salario_gerente) {
+        this.salario_gerente = salario_gerente;
+    }
+}

@@ -1,0 +1,11 @@
+package PackageS;
+
+public class Smartphone extends Produto {
+    public Smartphone(String nome, int estoque, double preco) {
+        super(nome, estoque, preco);
+    }
+
+    public void realizarLigacao() {
+        System.out.println("Realizando ligação pelo smartphone...");
+    }
+}

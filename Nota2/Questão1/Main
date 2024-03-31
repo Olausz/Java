@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int qtd_macas;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Digite a quantidade de maças: ");
+        qtd_macas = sc.nextInt();
+
+        if(qtd_macas >= 12){
+            double preco_reduzido = qtd_macas * 1.00;
+            System.out.println("Você escolheu comprar essa quantidade de maças: " + qtd_macas);
+            System.out.println("O Preço total será: "+ preco_reduzido + " reais");
+        }else{
+            double preco_normal = qtd_macas * 1.30;
+            System.out.println("Você escolheu comprar: " + qtd_macas + " maças");
+            System.out.println("O Preço total será: " + preco_normal + " reais");
+        }
+    }
+}

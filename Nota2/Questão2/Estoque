@@ -1,0 +1,9 @@
+public class estoque {
+    int quantidade_atual;
+    int quantidade_minima;
+    int quantidade_maxima;
+
+    public int quantidade_media(){
+        return(quantidade_maxima + quantidade_minima) / 2;
+    }
+}

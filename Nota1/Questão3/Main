@@ -1,0 +1,44 @@
+import  java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        Calculadora calc = new Calculadora();
+
+        System.out.print("Digite o primeiro numero: ");
+        calc.num1 = sc.nextDouble();
+        System.out.print("Digite o segundo numero: ");
+        calc.num2 = sc.nextDouble();
+
+        System.out.println("\nSelecione a Operação: ");
+        System.out.println("1 Para Adição, 2 Para Subtração, 3 para Divisão, 4 Para Multiplicação e 0 Para Sair ");
+
+
+        System.out.print("Digite o codigo para iniciar as operações: ");
+        int x = sc.nextInt();
+        switch (x){
+            case 0:
+                System.out.println("Saindo...");
+                break;
+            case 1:
+                   calc.Soma();
+                   System.out.println("A Soma dos Valores é: " + calc.Soma());
+                   break;
+            case 2:
+                   calc.Subtracao();
+                   System.out.println("A Subtração dos Valores é: " + calc.Subtracao());
+                   break;
+            case 3:
+                   calc.Divisao();
+                   System.out.println("A Divisão dos Valores é: " + calc.Divisao());
+                   break;
+            case 4:
+                   calc.Multiplicacao();
+                   System.out.println("A Multiplicação dos Valores é: " + calc.Multiplicacao());
+                   break;
+            default:
+                   System.out.println("O Codigo digitado é inváldo!");
+                   break;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+public class funcionario {
+    String Nome;
+    int Matricula;
+    double salario;
+    double inss;
+    double salario_li;
+
+    public void calculoINSS(){
+        inss = salario * 0.15;
+    }
+
+    public void calculoSalarioLiquido(){
+        salario_li = salario - inss;
+    }
+
+
+}
