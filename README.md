@@ -1,1 +1,1 @@
-# Notas-de-Aula-Java
+Só as notas das questões que valem ponto para a prova de java 🥇
